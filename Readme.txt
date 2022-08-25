@@ -15,3 +15,6 @@ Projects runs on Eclipse, Tomcat and MySQL.
 Setting Up Project
 1. Setup database in MySQL
 2. Run Java application with Tomcat.
+
+
+execute the SQL scripts in file (queries to execute)
