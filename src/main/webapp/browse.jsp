@@ -4,19 +4,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Amazon Books</title>
+<title>Sia Shopping</title>
 </head>
 <body style="font-family: Arial; font-size: 20px;">
 	<div
 		style="height: 65px; align: center; background: #DB5227; font-family: Arial; color: white;">
 		<br> <b> <a href=""
-			style="font-family: garamond; font-size: 34px; margin: 0px 0px 0px 10px; color: white; text-decoration: none;">thrill.io</a></b>
+			style="font-family: garamond; font-size: 34px; margin: 0px 0px 0px 10px; color: white; text-decoration: none;">Sia Shopping</a></b>
 		<div
 			style="height: 25px; background: #DB5227; font-family: Arial; color: white;">
 			<b> 
 				<a href="<%=request.getContextPath()%>/bookmark/mybooks"
-				style="font-size: 16px; color: white; margin-left: 1150px; text-decoration: none;">My
-					Books</a> 
+				style="font-size: 16px; color: white; margin-left: 1150px; text-decoration: none;">Cart</a> 
 				<a href="<%=request.getContextPath()%>/auth/logout"
 				style="font-size: 16px; color: white; margin-left: 10px; text-decoration: none;">Logout</a>
 			</b>
@@ -39,7 +38,7 @@
 					<br> <br> <a
 					href="<%=request.getContextPath()%>/bookmark/save?bid=${book.id}"
 					style="font-size: 18px; color: #0058A6; font-weight: bold; text-decoration: none">
-						Save</a>
+						Add to cart</a>
 				</td>
 			</tr>
 			<tr>
