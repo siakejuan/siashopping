@@ -4,15 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>thrill.io</title>
+<title>MERDEKA SHOPPING</title>
 </head>
 <body style="font-family:Arial;font-size:20px;">
 	<div style="height:65px;align: center;background: #DB5227;font-family: Arial;color: white;"">
 		<br><b>
-		<a href="" style="font-family:garamond;font-size:34px;margin:0 0 0 10px;color:white;text-decoration: none;">thrill.io</a></b>          
+		<a href="<%=request.getContextPath()%>/bookmark" style="font-family:garamond;font-size:34px;margin:0 0 0 10px;color:white;text-decoration: none;">MERDEKA SHOPPING</a></b>          
 		<div style="height:25px;background: #DB5227;font-family: Arial;color: white;">
 			<b>
-			<a href="<%=request.getContextPath()%>/bookmark" style="font-size:16px;color:white;margin-left:1150px;text-decoration:none;">Catalogue</a>
+			<a href="<%=request.getContextPath()%>/bookmark" style="font-size:16px;color:white;margin-left:1150px;text-decoration:none;">Catalog</a>
 			<a href="<%=request.getContextPath()%>/auth/logout" style="font-size:16px;color:white;margin-left:10px;text-decoration:none;">Logout</a>
 			</b>
 		</div> 
@@ -50,7 +50,7 @@
      	</c:when>
      <c:otherwise>
 		<br><br>
-       	<span style="font-size: 24px;color: #333333;margin:400px;">You haven't saved any items yet!</span>
+       	<span style="font-size: 24px;color: #333333;margin:400px;">There are no items in your cart.</span>
      </c:otherwise>
     </c:choose>
 </body>

@@ -68,7 +68,7 @@ public class UserDao {
 			e.printStackTrace();
 		}
 		
-		try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jid_thrillio?useSSL=false", "root", "root");
+		try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/siashopping?useSSL=false", "root", "root");
 				Statement stmt = conn.createStatement();) {	
 			String query = "Select id from User where email = '" + email + "' and password = '" + encodePassword + "'";
 			System.out.println("query: " + query);

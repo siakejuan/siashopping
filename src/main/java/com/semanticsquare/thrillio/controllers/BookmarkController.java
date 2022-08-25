@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = { "/bookmark", "/bookmark/save", "/bookmark/mybooks" })
+@WebServlet(urlPatterns = { "/bookmark", "/bookmark/save", "/bookmark/mybooks"})
 public class BookmarkController extends HttpServlet {
 	/*
 	 * // Tomcat creates a singleton for us private static BookmarkController

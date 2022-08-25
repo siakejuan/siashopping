@@ -1,6 +1,7 @@
 	package com.semanticsquare.thrillio.controllers;
 
 import java.io.IOException;
+import java.util.Objects;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -34,6 +35,10 @@ public class AuthController extends HttpServlet {
 		if (!request.getServletPath().contains("logout")) {
 			String email = request.getParameter("email");
 			String password = request.getParameter("password");
+			
+			if (Objects.equals(password, null)) {
+				password="";
+			}
 			
 			long userId = UserManager.getInstance().authenticate(email, password); 
 			if(userId != -1) {
