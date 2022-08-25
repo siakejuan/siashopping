@@ -1,0 +1,67 @@
+create database siashopping;
+
+CREATE TABLE User(id bigint PRIMARY KEY
+auto_increment,
+email varchar(100) not null,
+password varchar(50) not null,
+first_name varchar(100) not null,
+last_name varchar(100) not null,
+gender_id TINYINT,
+user_type_id TINYINT,
+created_date datetime not null,
+CONSTRAINT UNIQUE(email));
+
+INSERT INTO User (email, password, first_name,
+last_name, gender_id, user_type_id, created_date)
+VALUES ('sia@email.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', 'Sia',
+'KJ', 0, 0, NOW());
+
+CREATE TABLE Author(id bigint PRIMARY KEY
+auto_increment,
+name varchar(200) not null);
+
+INSERT INTO Author (name) VALUES ('Dale Carnegie');
+
+CREATE TABLE Publisher(id bigint PRIMARY KEY
+auto_increment,
+name varchar(200) not null);
+
+INSERT INTO Publisher (name) VALUES ('Simon & Schuster');
+
+CREATE TABLE Book_Author (id bigint PRIMARY KEY
+auto_increment,
+book_id bigint not null,
+author_id bigint not null,
+FOREIGN KEY (book_id) REFERENCES Book(id),
+FOREIGN KEY (author_id) REFERENCES Author(id),
+constraint UNIQUE(book_id, author_id));
+
+INSERT INTO Book_Author (book_id,author_id) VALUES (1,1);
+
+CREATE TABLE Book(id bigint PRIMARY KEY
+auto_increment,
+title varchar(500) not null,
+publication_year int,
+publisher_id bigint,
+book_genre_id TINYINT,
+amazon_rating double,
+kid_friendly_status TINYINT,
+created_date datetime not null,
+image_url varchar(500),
+FOREIGN KEY (publisher_id) REFERENCES Publisher(id),
+constraint UNIQUE (title (250), publication_year,
+publisher_id));
+
+INSERT INTO Book (title, publication_year,
+publisher_id, book_genre_id, amazon_rating,
+kid_friendly_status, created_date) VALUES 
+('How to Win Friends and Influence People',1998, 1, 6, 4.3, 2, NOW());
+
+CREATE TABLE User_Book (id bigint(20) PRIMARY KEY
+auto_increment,
+user_id bigint(20) not null,
+book_id bigint(20) not null,
+FOREIGN KEY (user_id) REFERENCES User(id),
+FOREIGN KEY (book_id) REFERENCES Book(id));
+
+
