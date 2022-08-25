@@ -1,4 +1,4 @@
-	package com.semanticsquare.thrillio.controllers;
+package com.semanticsquare.thrillio.controllers;
 
 import java.io.IOException;
 import java.util.Objects;

@@ -22,14 +22,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(urlPatterns = { "/bookmark", "/bookmark/save", "/bookmark/mybooks"})
 public class BookmarkController extends HttpServlet {
-	/*
-	 * // Tomcat creates a singleton for us private static BookmarkController
-	 * instance = new BookmarkController();
-	 * 
-	 * private BookmarkController() { }
-	 * 
-	 * public static BookmarkController getInstance() { return instance; }
-	 */
+
 	public BookmarkController() {
 	}
 
@@ -83,12 +76,9 @@ public class BookmarkController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 
-	// Bookmark manager will receive input from Controller layer to save bookmark
-	// into DAO
 	public void saveUserBookmark(User user, Bookmark bookmark) throws SQLException {
 		BookmarkManager.getInstance().saveUserBookmark(user, bookmark);
 
