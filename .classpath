@@ -24,13 +24,12 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/apache-tomcat-9.0.38/lib/servlet-api.jar" sourcepath="C:/apache-tomcat-9.0.56-windows-x64/apache-tomcat-9.0.56/apache-tomcat-9.0.56-src.zip">
+	<classpathentry kind="lib" path="C:/Users/siakejuan/Downloads/jakarta.servlet-api-6.0.0.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/siakejuan/Downloads/jakarta.servlet-api-6.0.0.jar">
+	<classpathentry kind="lib" path="C:/apache-tomcat-9.0.38/lib/servlet-api.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>

@@ -24,15 +24,12 @@ public class AuthController extends HttpServlet {
      */
     public AuthController() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		
 		RequestDispatcher dispatcher = null;
 		if (!request.getServletPath().contains("logout")) {
 			String email = request.getParameter("email");
@@ -64,7 +61,6 @@ public class AuthController extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 
