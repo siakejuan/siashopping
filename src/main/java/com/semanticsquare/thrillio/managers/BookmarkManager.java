@@ -78,24 +78,6 @@ public class BookmarkManager {
 		UserBookmark userBookmark = new UserBookmark();
 		userBookmark.setUser(user);
 		userBookmark.setBookmark(bookmark);
-		/*
-		if (bookmark instanceof WebLink) {
-			try {				
-				String url = ((WebLink)bookmark).getUrl();
-				if (!url.endsWith(".pdf")) {
-					String webpage = HttpConnect.download(((WebLink)bookmark).getUrl());
-					if (webpage != null) {
-						IOUtil.write(webpage, bookmark.getId());
-					}
-				}				
-			} catch (MalformedURLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (URISyntaxException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}*/
 		
 		// DAO layer - interacts with the database 
 		dao.saveUserBookmark(userBookmark);

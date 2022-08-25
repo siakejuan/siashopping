@@ -3,7 +3,6 @@ A web application that mimics a shopping cart
 Using 
 1. servlet 
 2. jsp
-3. 
 
 Some of the external JARs need to be added manually.
 1. servlet-api

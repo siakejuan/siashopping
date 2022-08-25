@@ -24,10 +24,7 @@ public class BookmarkDao {
 	}
 
 	public void saveUserBookmark(UserBookmark userBookmark) {
-//		DataStore.add(userBookmark);
 
-		// Create 3 tables that stores the User_Book, User_Movie and User_Weblink in
-		// MySQL
 		try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/siashopping?userSSL=false",
 				"root", "root"); Statement stmt = conn.createStatement();) {
 			if (userBookmark.getBookmark() instanceof Book) {
@@ -106,7 +103,7 @@ public class BookmarkDao {
 			tableToUpdate = "WebLink";
 		}
 
-		try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jid_thrillio?userSSL=false",
+		try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/siashopping?userSSL=false",
 				"root", "password"); Statement stmt = conn.createStatement();) {
 
 			String query = "update " + tableToUpdate + " set kid_friendly_status = " + kidFriendlyStatus
@@ -125,7 +122,7 @@ public class BookmarkDao {
 			tableToUpdate = "WebLink";
 		}
 
-		try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jid_thrillio?userSSL=false",
+		try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/siashopping?userSSL=false",
 				"root", "password"); Statement stmt = conn.createStatement();) {
 			String query = "update " + tableToUpdate + " set shared_by = " + userId + " where id = " + bookmark.getId();
 			stmt.executeUpdate(query);
@@ -149,7 +146,7 @@ public class BookmarkDao {
 			e.printStackTrace();
 		}
 
-		try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jid_thrillio?useSSL=false",
+		try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/siashopping?useSSL=false",
 				"root", "root"); Statement stmt = conn.createStatement();) {
 
 			String query = "";
@@ -202,7 +199,7 @@ public class BookmarkDao {
 			e.printStackTrace();
 		}
 
-		try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jid_thrillio?useSSL=false",
+		try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/siashopping?useSSL=false",
 				"root", "root"); Statement stmt = conn.createStatement();) {
 			String query = "Select b.id, title, image_url, publication_year, p.name, GROUP_CONCAT(a.name SEPARATOR ',') AS authors, book_genre_id, amazon_rating, created_date"
 					+ " from Book b, Publisher p, Author a, Book_Author ba " + "where b.id = " + bid
